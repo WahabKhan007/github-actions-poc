@@ -1,0 +1,11 @@
+name: 2B Schedule
+on:
+  schedule:
+    - cron: '*/5 * * * *'
+  workflow_dispatch:
+jobs:
+  scheduled-task:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Report time
+        run: echo "Cron trigger executed at $(date)"

@@ -1,0 +1,9 @@
+{
+  "name": "github-actions-poc",
+  "version": "1.0.0",
+  "description": "Proof of Concept for GitHub Actions DevOps Course",
+  "dependencies": {
+    "chalk": "^4.1.2",
+    "lodash": "^4.17.21"
+  }
+}

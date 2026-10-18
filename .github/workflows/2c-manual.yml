@@ -1,0 +1,22 @@
+name: 2C Manual
+on:
+  workflow_dispatch:
+    inputs:
+      name:
+        description: 'Your name'
+        required: true
+        default: 'Abdul Wahab Khan'
+      greeting:
+        description: 'Greeting phrase'
+        required: true
+        default: 'Hello'
+      data:
+        description: 'Extra payload data'
+        required: false
+        default: 'devops-demo-data'
+jobs:
+  greet:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Display inputs
+        run: echo "${{ inputs.greeting }} ${{ inputs.name }}! Data received: ${{ inputs.data }}"

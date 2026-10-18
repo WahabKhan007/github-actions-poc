@@ -1,0 +1,17 @@
+name: Push and PR
+on:
+  push:
+    branches: [main, dev]
+  pull_request:
+    branches: [main]
+jobs:
+  test-build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+      - name: Event verification
+        run: |
+          echo "Triggered by event: ${{ github.event_name }}"
+          echo "Branch reference: ${{ github.ref }}"
+          echo "Actor: ${{ github.actor }}"

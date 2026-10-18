@@ -1,0 +1,11 @@
+name: 2D Webhook
+on:
+  repository_dispatch:
+    types: [customwebhook]
+  workflow_dispatch:
+jobs:
+  hook:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Process webhook payload
+        run: echo "Webhook received. Message is: ${{ github.event.client_payload.message }}"
