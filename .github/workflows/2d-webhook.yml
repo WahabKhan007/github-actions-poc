@@ -8,4 +8,5 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Process webhook payload
-        run: echo "Webhook received. Message is: ${{ github.event.client_payload.message }}"
+        run: |
+          echo "Webhook received. Message is ${{ github.event.client_payload.message }}"
