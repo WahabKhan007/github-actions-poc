@@ -19,4 +19,5 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Display inputs
-        run: echo "${{ inputs.greeting }} ${{ inputs.name }}! Data received: ${{ inputs.data }}"
+        run: |
+          echo "${{ inputs.greeting }} ${{ inputs.name }}. Data is ${{ inputs.data }}"
